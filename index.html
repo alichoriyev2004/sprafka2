@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMED</title>
+    <link rel="icon" href="./img/icon.png">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    
+    <div class="nav con">
+        <div class="logo"><img src="./img/logo.png" alt=""></div>
+        <select id="lang" class="lang-select">
+  <option value="uz" data-flag="./img/uz.png">O`zbekcha</option>
+  <option value="ru" data-flag="./img/ru.png">Русский</option>
+  <option value="en" data-flag="./img/en.png">English</option>
+</select>
+    </div>
+    <h3>Hujjatni ko'rish uchun PIN - kodni kiriting</h3>
+    <div class="otp-container">
+  
+  <div class="otp-inputs" id="otpInputs">
+    <input type="text" maxlength="1" inputmode="numeric">
+    <input type="text" maxlength="1" inputmode="numeric">
+    <input type="text" maxlength="1" inputmode="numeric">
+    <input type="text" maxlength="1" inputmode="numeric">
+     
+  </div>
+ <div class="error-message" id="errorMsg"></div>
+</div>
+   <script src="./main/main.js"></script>
 </body>
 </html>

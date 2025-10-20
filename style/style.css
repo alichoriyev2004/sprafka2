@@ -4,12 +4,107 @@
     padding: 0;
   }
 .con{max-width: 1200px;
-    margin: 0 15px;
+    margin: 0 24px;
 }
 a{text-decoration: none;}
 
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('./img/uz.png') no-repeat 16px center;
+  background-size: 20px 20px;
+  padding-left: 25px;
+  height: 40px;
+  width: 155px;
+  font-size: 16px;
+  border-radius: 40px;              /* dumaloq shakl beradi */
+ border-color: #ccc;
+ text-align: center;
+  border: 1px solid #ccc;
+  outline: none; /* tashqi borderni olib tashlaydi */
+  transition: box-shadow 0.2s ease, border 0.2s ease;
+&:hover{
+  color:#1681ff ;
+  border-color: #1681ff;
+}
+&:focus {
+  border: none; /* qora borderni olib tashlaymiz */
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* chiroyli soya */
+}
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 64px;
+}
+
+.lang-select {
+ 
+}
+
+  .otp-container {
+    text-align: center;
+ 
+  
+    border-radius: 16px;
+   
+    width: 260px;
+    margin: 0 auto;
+   
+  }
+
+  .otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 auto;
+    /* margin-bottom: 15px; */
+  }
+
+  .otp-inputs input {
+    width: 59px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.2s;
+    margin-top: 30px;
+  }
+h3{
+  margin: 0 auto;
+  font-size: 30px;
+   margin-top: 80px;
+   text-align: center;
+   max-width: 440px;
+}
+  .otp-inputs input:focus {
+    border-color: #4491e4;
+    box-shadow: 0 0 5px rgba(81, 125, 172, 0.4);
+  }
+
+  .otp-inputs.error input {
+    border-color: #ff3b3b;
+  }
+
+  .error-message {
+    color: #ff3b3b;
+    font-size: 14px;
+    min-height: 18px;
+    margin-top: 5px;
+    text-align: left;
+
+  }
+
+  .success-message {
+    color: #00b341;
+    font-size: 15px;
+    margin-top: 8px;
+  }
 /* @media only screen and (max-height: 800px) {
  footer {
     position: relative;
   }
-}
+} */
