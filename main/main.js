@@ -58,3 +58,40 @@
     }
   }
   
+  const translations = {
+  uz: {
+    title: "Hujjatni ko'rish uchun PIN - kodni kiriting",
+    btn: "Ochish"
+  },
+  ru: {
+    title: "Введите PIN-код для просмотра документа",
+    btn: "Открыть"
+  },
+  en: {
+    title: "Enter PIN to view document",
+    btn: "Open"
+  }
+};
+
+const langSelect = document.getElementById("lang");
+const elements = {
+  title: document.getElementById("title"),
+  btn: document.getElementById("btn")
+};
+
+function setLanguage(lang) {
+  const t = translations[lang];
+  elements.title.innerHTML = t.title;
+  elements.btn.innerHTML = t.btn;
+  localStorage.setItem("lang", lang);
+}
+
+// Boshlang‘ich tilni yuklash
+const savedLang = localStorage.getItem("lang") || "uz";
+langSelect.value = savedLang;
+setLanguage(savedLang);
+
+// Tanlanganda o‘zgartirish
+langSelect.addEventListener("change", (e) => {
+  setLanguage(e.target.value);
+});
