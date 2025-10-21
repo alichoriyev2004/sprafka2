@@ -146,7 +146,7 @@ h3{
   background: url('./img/uz.png') no-repeat 12px center;
 }
 h3{
-  font-size: 21px;
+  font-size: 20px;
   width: 330px;
   margin-top: 30px;
 
@@ -156,7 +156,10 @@ h3{
 }
 .img-qr,.qr-img{
   width: 320px;
+  margin-bottom: 20px;
 }
-
+.qr-img{
+  margin-bottom: 20px; !important
+}
 }
 
