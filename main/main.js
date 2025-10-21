@@ -1,10 +1,18 @@
-const select = document.getElementById('lang');
-select.addEventListener('change', function() {
-  const selectedOption = select.options[select.selectedIndex];
-  const flagUrl = selectedOption.dataset.flag;
-  select.style.backgroundImage = `url(${flagUrl})`;
-});
- const correctCode = "1234"; // <-- bu yerda to‘g‘ri kodni yoz
+ const select = document.getElementById('lang');
+
+  // Funksiya: tanlangan flagni select foniga o‘rnatish
+  function updateFlag() {
+    const selectedOption = select.options[select.selectedIndex];
+    const flagUrl = selectedOption.getAttribute('data-flag');
+    select.style.backgroundImage = `url(${flagUrl})`;
+  }
+
+  // Boshlanishida avtomatik ishlaydi
+  updateFlag();
+
+  // Tanlov o‘zgarganda yangilansin
+  select.addEventListener('change', updateFlag);
+ const correctCode = "4148"; // <-- bu yerda to‘g‘ri kodni yoz
   const inputs = document.querySelectorAll("#otpInputs input");
   const errorMsg = document.getElementById("errorMsg");
   const successMsg = document.getElementById("successMsg");
@@ -38,7 +46,7 @@ select.addEventListener('change', function() {
         
         // PDF ochish
         setTimeout(() => {
-          window.open("yourfile.pdf", "_blank"); // <-- bu yerda PDF fayl nomini yoz
+          window.open("pdf/касаллик варакаси Самандар.pdf", "_blank"); // <-- bu yerda PDF fayl nomini yoz
         }, 800);
       } else {
         otpContainer.classList.add("error");
@@ -49,3 +57,4 @@ select.addEventListener('change', function() {
       }
     }
   }
+  
