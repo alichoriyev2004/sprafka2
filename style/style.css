@@ -132,8 +132,31 @@ h3{
 
 
   
-/* @media only screen and (max-height: 800px) {
- footer {
-    position: relative;
-  }
-} */
+@media only screen and (max-width: 700px) {
+.logo{
+  width:138px ;
+}
+.imgg{
+  width: 138px;
+}
+.lang-select{
+  width: 40px;
+  height: 40px;
+  padding-left: 40px;
+  background: url('./img/uz.png') no-repeat 12px center;
+}
+h3{
+  font-size: 21px;
+  width: 330px;
+  margin-top: 30px;
+
+}
+.nav{
+  padding-top: 16px;
+}
+.img-qr,.qr-img{
+  width: 320px;
+}
+
+}
+
