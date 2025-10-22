@@ -35,28 +35,28 @@
     });
   });
 
-  function checkCode() {
-    let enteredCode = "";
-    inputs.forEach(i => enteredCode += i.value);
+  // function checkCode() {
+  //   let enteredCode = "";
+  //   inputs.forEach(i => enteredCode += i.value);
     
-    if (enteredCode.length === 4) {
-      if (enteredCode === correctCode) {
-        errorMsg.textContent = "";
-        otpContainer.classList.remove("error");
+  //   if (enteredCode.length === 4) {
+  //     if (enteredCode === correctCode) {
+  //       errorMsg.textContent = "";
+  //       otpContainer.classList.remove("error");
         
-        // PDF ochish
-        setTimeout(() => {
-          window.open("pdf/касаллик варакаси Самандар.pdf", "_blank"); // <-- bu yerda PDF fayl nomini yoz
-        }, 800);
-      } else {
-        otpContainer.classList.add("error");
-        errorMsg.textContent = "Incorrect document number";
-        successMsg.textContent = "";
-        inputs.forEach(i => i.value = "");
-        inputs[0].focus();
-      }
-    }
-  }
+  //       // PDF ochish
+  //       setTimeout(() => {
+  //         window.open("pdf/касаллик варакаси Самандар.pdf", "_blank"); // <-- bu yerda PDF fayl nomini yoz
+  //       }, 800);
+  //     } else {
+  //       otpContainer.classList.add("error");
+  //       errorMsg.textContent = "Incorrect document number";
+  //       successMsg.textContent = "";
+  //       inputs.forEach(i => i.value = "");
+  //       inputs[0].focus();
+  //     }
+  //   }
+  // }
   
   const translations = {
   uz: {
@@ -95,3 +95,37 @@ setLanguage(savedLang);
 langSelect.addEventListener("change", (e) => {
   setLanguage(e.target.value);
 });
+
+
+ const codes = {
+    "4148": "pdf/касаллик варакаси Самандар.pdf",
+    "8017": "pdf/Самандар касаллик варакаси.pdf",
+    // shu yerga yana qo‘shish mumkin:
+    // "9101": "pdf/отпуск варакаси Азиз.pdf"
+  };
+
+  function checkCode() {
+    let enteredCode = "";
+    inputs.forEach(i => enteredCode += i.value);
+
+    if (enteredCode.length === 4) {
+      const pdfPath = codes[enteredCode]; // kiritilgan kodga mos PDFni topish
+
+      if (pdfPath) {
+        // To‘g‘ri kod kiritilgan
+        errorMsg.textContent = "";
+        otpContainer.classList.remove("error");
+
+        setTimeout(() => {
+          window.open(pdfPath, "_blank"); // tegishli PDF ochiladi
+        }, 800);
+      } else {
+        // Noto‘g‘ri kod
+        otpContainer.classList.add("error");
+        errorMsg.textContent = "Incorrect document number";
+        successMsg.textContent = "";
+        inputs.forEach(i => i.value = "");
+        inputs[0].focus();
+      }
+    }
+  }
