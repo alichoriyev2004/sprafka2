@@ -108,6 +108,7 @@ langSelect.addEventListener("change", (e) => {
     "7269": "pdf/касаллик варакаси 6.pdf",
     "2693": "pdf/касаллик варакаси 7.pdf",
     "8019": "pdf/касаллик варакаси 8.pdf",
+    "3569": "pdf/DMED.pdf",
     // shu yerga yana qo‘shish mumkin:
     // "9101": "pdf/отпуск варакаси Азиз.pdf"
   };
