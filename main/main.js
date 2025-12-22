@@ -98,20 +98,9 @@ langSelect.addEventListener("change", (e) => {
 
 
  const codes = {
-    "4148": "pdf/касаллик варакаси Самандар.pdf",
-    "8017": "pdf/Самандар касаллик варакаси.pdf",
-    "8018": "pdf/касаллик варакаси.pdf",
-    "1017": "pdf/касаллик варакаси 2.pdf",
-    "2104": "pdf/касаллик варакаси 3.pdf",
-    "7304": "pdf/касаллик варакаси 4.pdf",
-    "6104": "pdf/касаллик варакаси 5.pdf",
-    "7269": "pdf/касаллик варакаси 6.pdf",
-    "2693": "pdf/касаллик варакаси 7.pdf",
-    "8019": "pdf/касаллик варакаси 8.pdf",
     "3569": "pdf/DMED.pdf",
     "0119": "pdf/dmed xamid.pdf",
-    // shu yerga yana qo‘shish mumkin:
-    // "9101": "pdf/отпуск варакаси Азиз.pdf"
+    "8017": "pdf/HUSANJON.pdf",
   };
 
   function checkCode() {
