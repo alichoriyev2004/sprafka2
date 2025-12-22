@@ -101,6 +101,9 @@ langSelect.addEventListener("change", (e) => {
     "3569": "pdf/DMED.pdf",
     "0119": "pdf/dmed xamid.pdf",
     "8017": "pdf/HUSANJON.pdf",
+    "1903": "pdf/JAVOXIR.pdf",
+    "2079": "pdf/JAVOXIR 2.pdf",
+    "3969": "pdf/JAVOXIR 3.pdf",
   };
 
   function checkCode() {
