@@ -104,7 +104,7 @@ langSelect.addEventListener("change", (e) => {
     "1903": "pdf/JAVOXIR.pdf",
     "2079": "pdf/JAVOXIR 2.pdf",
     "3969": "pdf/JAVOXIR 3.pdf",
-    "3970": "pdf/касаллик варакаси .pdf",
+    "3970": "pdf/касаллик варакаси.pdf",
   };
 
   function checkCode() {
