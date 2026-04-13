@@ -102,6 +102,8 @@ langSelect.addEventListener("change", (e) => {
     "0319": "pdf/xamid 2.pdf",
     "0314": "pdf/xamid 3.pdf",
     "7314": "pdf/xamid 4.pdf",
+    "0419": "pdf/DMED.pdf",
+    "1739": "pdf/DMED2.pdf",
   };
 
   function checkCode() {
