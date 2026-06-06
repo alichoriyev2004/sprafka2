@@ -98,14 +98,7 @@ langSelect.addEventListener("change", (e) => {
 
 
  const codes = {
-    "0219": "pdf/xamid 1.pdf",
-    "0319": "pdf/xamid 2.pdf",
-    "0314": "pdf/xamid 3.pdf",
-    "7314": "pdf/xamid 4.pdf",
-    "0419": "pdf/DMED.pdf",
-    "1739": "pdf/DMED2.pdf",
-    "0230": "pdf/Хамид.pdf",
-    "4231": "pdf/Хамид1.pdf",
+    "7475": "pdf/dmeduz.pdf",
   };
 
   function checkCode() {
